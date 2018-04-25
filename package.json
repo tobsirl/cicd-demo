@@ -4,8 +4,12 @@
   "description": "node lab 1",
   "main": "index.js",
   "scripts": {
+    "build-babel": "babel -d ./build ./src -s",
+    "clean": "rimraf build && mkdir build ",
+    "build": "npm run clean && npm run build-babel",
+    "start-prod": "npm run build && node ./build/index.js",
     "start-dev": "nodemon --exec babel-node src/index.js",
-     "test": "echo \"No test specified\"  && exit 0"
+    "test": "echo \"No test specified\"  && exit 0"
   },
   "author": "fxwalsh",
   "license": "ISC",
@@ -16,7 +20,8 @@
     "eslint": "^4.16.0",
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-react": "^7.7.0",
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "axios": "^0.18.0",
