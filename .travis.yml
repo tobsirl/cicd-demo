@@ -4,3 +4,10 @@ node_js:
 - stable
 before_script:
 - npm run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: Y3zGXHqWWaEsCUec8ErfGAALQHsWjmgcOOwQO0pE0yIEl/ul2ibtF9OfKF8zspdp1NdfzO8NRPGE4Zae+XvIVo4Mj90pN8gTwMjmLAbXM/exJWBxevv4Sd9DcWLSNNYTVZ/7zDTt+XrAJOggIUkGYRbn4pSGtEotD+xvvUB36L/uUvvyhcdLOq0MbOBFw3LBdW6yhzrVnqKPw3Rnhj3Yct8lovJog94TVsDVgmFzFhG/cUTKCcDRDlBBgKCA2k/0yCMT4ZrBmkBdy4V8N3qZd7xbA2Yg0vQ+XV+pwsdg3EqDJ2CCA7KiorW1lpaX1GHEJGzPwFxTLg/kJg0+WOX7HpN2syx8yBtijzCijUguKDdyGiqN92dutHXS1TUfHmdM+pD8Z6QQg7YdpOft4GhMI989HNzgP5MdH++f7n+HeitOMdpBYmEd01wUlOUZPvvaVmMe9zfh0+30Efxo6nlr7BHY1H6RpPz802Wr0LmyDmSpgME+y9obDiJpAiGZ+72He/mCHxn4v21qWAv/lf4ObIpZ3e5yP9m09qKl1y0Mzq9EX9bmX6uqgbVekf/TTeH7BgKrlllSqP81gV7wvgTG0zTNU1apb+TnCFLQNSbGwmttIBiuNfkK6Oh/c76O5DjXdAmuG+tS77uMUdE/0L+3BOyD885Pv53v2XJFlwFiAmE=
+  app: cicd-demo
+  on:
+    repo: tobsirl/cicd-demo
